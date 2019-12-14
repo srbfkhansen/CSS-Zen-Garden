@@ -1,0 +1,383 @@
+/** Styles for Sunflower CSS Zen Garden - Group project by Lauren Allred and Ruth Hansen **/
+/* need to figure out how to add image to the top of our website - perhaps image with transparency except for where the image is on the left? **/
+/* SCSS variables **/
+/* mixin for flex container - access using     @include flex-container;        */
+#css-zen-garden {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+body {
+  background-color: #c68342;
+}
+
+.section {
+  display: block;
+}
+
+.intro h1,
+h2 {
+  display: block;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 10px;
+  text-align: center;
+  
+
+}
+
+.summary {
+  display: block;
+  text-align: center;
+}
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 90%;
+  margin: 1em;
+}
+
+.preamble {
+  width: 90%;
+  margin: 1em;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #507614;
+  background-color: #F57C00;
+
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 5px 10px darkgreen;
+
+}
+
+.preamble:hover {
+  color: darkgreen;
+}
+
+.explanation {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: darkgreen;
+  background-color: #ff8b3b;
+  height: 45%;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 5px 10px darkgreen;
+}
+
+.explanation:hover {
+  color: darkgreen;
+}
+
+
+
+
+.participation {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: darkgreen;
+  background-color: #ff8b3b;
+  height: 55%;
+  padding: 13px;
+  border-radius: 25px;
+  box-shadow: 5px 10px darkgreen;
+
+
+}
+
+.participation:hover {
+  color: darkgreen;
+}
+
+.requirements {
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-color: darkgreen;
+  background-color: #F57C00;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 2px 7px darkgreen;
+
+}
+
+.requirements:hover {
+  color: darkgreen;
+}
+
+.benefits {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: darkgreen;
+  background-color: #ff8b3b;
+  height: 45%;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 5px 10px darkgreen;
+}
+
+.benefits:hover {
+  color: darkgreen;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: darkgreen;
+  background-color: #ff8b3b;
+  height:13%;
+  padding: 9px;
+  border-radius: 25px;
+  box-shadow: 5px 10px darkgreen;
+
+
+}
+
+.sidebar:hover a {
+  color: darkgreen;
+}
+
+
+
+
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 1em;
+}
+
+header:before {
+  content: "";
+  width: 300px;
+  height: 275px;
+  background-image: url("smallSunflowerSquare.jpg");
+  display: block;
+  margin: 5vh:auto;
+  box-shadow: 5px 10px darkgreen;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border-style: solid;
+
+
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.summary {
+  width: 100%;
+  padding: 0 10vh;
+  margin-bottom: 2vh;
+}
+
+.intro {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+/* animation of sunflower */
+.benefits:after {
+  content: "";
+  border-radius: 100%;
+  display: block;
+  background-color: #e48a00;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  margin: 15% 45%;
+  -webkit-animation: grow 10s infinite;
+  box-shadow: 15px 17px #ffca00, -15px 17px #ffca00, -22px -7px #ffca00, 0px -22px #ffca00, 22px -7px #ffca00;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.85);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+
+  75% {
+    -webkit-transform: rotate(360deg);
+  }
+
+  100% {
+    -webkit-transform: scale 1;
+  }
+
+
+
+
+
+
+}
+
+/* styles for medium screen */
+@media screen and (min-width: 800px) {
+  header:before {
+    float: left;
+    display: block;
+    margin: 5vh 2vh;
+  }
+
+  .benefits:after {
+    margin: 25% 40%;
+  }
+
+  .intro h1,
+  h2 {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    float: right;
+  }
+
+  .intro h1 {
+    margin-top: 15vh;
+  }
+
+  .summary {
+    float: right;
+    width: 40%;
+    margin-left: 40%;
+    margin-top: 25vh;
+  }
+
+  header {
+    position: absolute;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-left: 1em;
+  }
+
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 1em;
+  }
+
+  .main {
+    display: inline-flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .preamble {
+    width: 100%;
+    margin: 1em;
+  }
+
+  .page-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .explanation {
+    width: 28%;
+    margin: 1em;
+  }
+
+  .participation {
+    width: 28%;
+    margin: 1em;
+  }
+
+  .benefits {
+    width: 28%;
+    margin: 1em;
+  }
+
+  .requirements {
+    width: 100%;
+    margin: 1em;
+  }
+}
+
+/* styles for large screen */
+@media screen and (min-width: 1200px) {
+  header:before {
+    content: "";
+    width: 500px;
+    height: 280px;
+    background-image: url("largeSunflowerRec.jpg");
+    display: block;
+    border: solid #5c640a 5px;
+  }
+
+  .summary {
+    width: 30%;
+    margin-left: 50%;
+    margin-top: 25vh;
+  }
+}
+
+/* styles for extra-large screen */
+@media screen and (min-width: 1600px) {
+  header:before {
+    content: "";
+    width: 800px;
+    height: 290px;
+    background-image: url("xlargeSunflowerRec.jpg");
+    display: block;
+    border: solid #5c640a 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
